@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Weather Dashboard</h1>
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="cityInput" 
+                    placeholder="Enter city name..." 
+                    autocomplete="off"
+                >
+                <button id="searchBtn">Search</button>
+            </div>
+        </header>
+
+        <main>
+            <div id="loadingSpinner" class="spinner hidden"></div>
+            <div id="errorMessage" class="error-message hidden"></div>
+
+            <!-- Current Weather -->
+            <section id="currentWeather" class="current-weather hidden">
+                <div class="weather-icon-large">
+                    <img id="weatherIcon" src="" alt="Weather icon">
+                </div>
+                <div class="weather-info">
+                    <h2 id="cityName"></h2>
+                    <p id="weatherDescription"></p>
+                    <div class="temperature">
+                        <span id="temperature"></span>
+                        <span id="feelsLike"></span>
+                    </div>
+                    <div class="weather-details">
+                        <div class="detail">
+                            <span class="label">Humidity</span>
+                            <span id="humidity" class="value"></span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">Wind Speed</span>
+                            <span id="windSpeed" class="value"></span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">Pressure</span>
+                            <span id="pressure" class="value"></span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">UV Index</span>
+                            <span id="uvIndex" class="value"></span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">Visibility</span>
+                            <span id="visibility" class="value"></span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">Dew Point</span>
+                            <span id="dewPoint" class="value"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hourly Forecast -->
+            <section id="hourlyForecast" class="hourly-forecast hidden">
+                <h3>Hourly Forecast</h3>
+                <div id="hourlyContainer" class="hourly-container"></div>
+            </section>
+
+            <!-- 7-Day Forecast -->
+            <section id="dailyForecast" class="daily-forecast hidden">
+                <h3>7-Day Forecast</h3>
+                <div id="dailyContainer" class="daily-container"></div>
+            </section>
+
+            <!-- Recently Searched -->
+            <section id="recentSearches" class="recent-searches">
+                <h3>Recently Searched</h3>
+                <div id="recentCities" class="recent-cities"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Weather data provided by Open-Meteo API</p>
+            <p>© 2024 Weather Dashboard</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
