@@ -1,0 +1,11 @@
+option.BLOOM=Bloom Effect
+option.BLOOM_STRENGTH=Bloom Intensity
+option.FOG=Volumetric Fog
+option.FOG_DENSITY=Fog Thickness
+option.SATURATION=Color Saturation
+option.CONTRAST=Contrast
+option.EXPOSURE=Exposure
+
+screen.BLOOM=Bloom Settings
+screen.FOG=Fog Settings
+screen.COLOR=Color Settings
